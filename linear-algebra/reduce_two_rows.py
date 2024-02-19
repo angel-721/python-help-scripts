@@ -15,6 +15,22 @@ def parseArgs():
     args = parser.parse_args()
     return args
 
+# Have file called row.txt in same folder as this SCRIPT
+# Have it set up with two lines that have columns of 2 different reduce_two_rows
+
+# ex) row1 = [1,2,3]   row2 = [4, 5, 6]; then have txt look like this
+
+# | 1 2 3 |
+# | 4 5 6 |
+
+# The |'s above are just borders. Don't have them in your row.txt
+# Ensure there's a single space between each column. Floats and negatives are okay
+# check out the row.txt that comes with this for an example file input
+# ENSURE BOTH ROWS ARE EQUAL LENGTH
+
+# CALL SCRIPT such as:
+# python3 ./reduce_two_rows.py -s1 n -s2 n2
+# set n1 to the scalar for row1 and n2 for row2 scalar
 def main(args):
     row1 = []
     row2 = []
@@ -35,8 +51,8 @@ def main(args):
     row2 = np.array(row2)
     row2 = np.multiply(row2, scale2)
 
-    new_row = np.add(row1, row2)
-    print(new_row)
+    new_row2 = np.add(row1, row2)
+    print(new_row2)
 
 
 if __name__ == "__main__":
